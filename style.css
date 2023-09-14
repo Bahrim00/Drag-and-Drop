@@ -1,0 +1,317 @@
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c1dbe9;
+
+}
+
+
+
+.headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#message {
+    position: absolute;
+    border: 1px black solid;
+    background-color: green;
+    z-index: 3;
+    display: flex;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+    flex-direction: column;
+}
+
+.h1 {
+    border: #333 1px solid;
+    margin: 0;
+    font-size: 30px;
+    width: 90rem;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    box-shadow: black 1px 1px 10px 1px;
+    background: rgb(128, 194, 208);
+    background: linear-gradient(90deg, rgba(128, 194, 208, 1) 0%, rgba(0, 212, 255, 0.28753508239233194) 100%);
+
+}
+
+.pText {
+    font-size: 20px;
+}
+
+#game {
+    display: flex;
+    width: 100%;
+    border: 1px black solid;
+    margin: 5px;
+    padding: 30px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: gainsboro;
+    box-shadow: #333 1px 2px 2px 2px;
+    background: rgb(128, 194, 208);
+    background: linear-gradient(90deg, rgba(128, 194, 208, 1) 0%, rgba(0, 212, 255, 0.28753508239233194) 100%);
+}
+
+.container {
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+    min-height: 50%;
+    display: grid;
+    height: 625px;
+    grid-template-columns: repeat(4, 2fr);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.container0 {
+    min-width: 400px;
+    border-radius: 50px;
+    margin-right: 20px;
+    border: 1px black solid;
+}
+
+
+
+.container1,
+.container2,
+.container3,
+.container4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 10px;
+    padding: 1rem;
+    width: 10rem;
+    height: 294px;
+    align-items: center;
+    color: white;
+    margin: 0px 5px 5px 5px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.container1 .draggable .front-face {
+    background-color: rgb(74, 185, 54);
+}
+
+.container2 .draggable .front-face {
+    background-color: rgb(74, 185, 54);
+}
+
+.container3 .draggable .front-face {
+    background-color: rgb(74, 185, 54);
+}
+
+.container4 .draggable .front-face {
+    background-color: rgb(74, 185, 54);
+}
+
+
+
+.rezultate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    width: 50%;
+    height: 350px;
+}
+
+.draggable {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 3rem;
+
+}
+
+.container1 .draggable .front-face .slotText .text1 {
+    color: red;
+}
+
+.container2 .draggable .front-face .slotText .text2 {
+    color: green;
+}
+
+.container3 .draggable .front-face .slotText .text3 {
+    color: blue;
+}
+
+.container4 .draggable .front-face .slotText .text4 {
+    color: orange;
+}
+
+
+.container1 .draggable,
+.container2 .draggable,
+.container3 .draggable,
+.container4 .draggable {
+    width: 100%;
+    height: 1rem;
+    margin: 1%;
+    padding: 1%;
+    font-size: 15px;
+}
+
+.slotText img {
+    width: 100%;
+    height: 100%
+}
+
+.memory-card {
+    width: 50%;
+    height: calc(33.333% -10px);
+    margin: 5px;
+    margin-left: 15px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    border: 3px solid black;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    font-size: 25px;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    position: absolute;
+    border-radius: 5px;
+    background: rgb(54, 185, 154);
+    backface-visibility: hidden;
+    box-shadow: 3px 5px 10px rgba(90, 47, 47, 0.2);
+
+}
+
+.correct {
+    color: rgb(160, 255, 160);
+    font-size: 15px;
+}
+
+#correctContainer1,
+#correctContainer2,
+#correctContainer3,
+#correctContainer4 {
+    font-size: 13px;
+    width: 105%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: antiquewhite;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+}
+
+
+
+.slotText {
+    font-size: 14px;
+    border: 1px beige solid;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 7rem;
+    border-radius: 10px
+}
+
+.text1,
+.text2,
+.text3,
+.text4 {
+    position: relative
+}
+
+@media (max-width:500px) {
+
+
+
+    /* Background Styles Only */
+
+
+
+
+    .side-links {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .side-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1px;
+        color: white;
+        width: 180px;
+        padding: 10px 0;
+        border-radius: 10px;
+    }
+
+    .side-link-youtube {
+        background-color: red;
+    }
+
+    .side-link-twitter {
+        background-color: #1DA1F2;
+    }
+
+    .side-link-github {
+        background-color: #6e5494;
+    }
+
+    .side-link-text {
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .side-link-icon {
+        color: white;
+        font-size: 30px;
+    }
+}
